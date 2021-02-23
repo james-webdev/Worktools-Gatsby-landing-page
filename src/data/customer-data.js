@@ -1,26 +1,25 @@
+import Beatnik from '../assets/images/Beatnik.png';
+import AdDynamo from '../assets/images/addynamo.png';
+import Wib from '../assets/images/aknibba.png';
+
 export default [
   {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-    content:
-      'Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet consectetur adipiscing elit duis.',
-    customerName: 'Jane Doe',
-    customerTitle: 'Director of Research and Data',
-    customerImage: 'https://placeimg.com/150/150/people'
+    content: '“For us, its the most convenient way to manage out IT Security”',
+    customerName: 'Damien Cerri',
+    customerTitle: 'CEO Beatnik Games',
+    customerImage: { Beatnik }
   },
   {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
     content:
-      'Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet consectetur adipiscing elit duis.',
-    customerName: 'John Doe',
-    customerTitle: 'Director of Research and Data',
-    customerImage: 'https://placeimg.com/150/150/people'
+      '“Worktools helped us to fix all our historic non-compliances within 48 hours of on-boarding - result!”',
+    customerName: 'Sam Wriley',
+    customerTitle: 'Director - AD Dynamo',
+    customerImage: { AdDynamo }
   },
   {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-    content:
-      'Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet consectetur adipiscing elit duis.',
-    customerName: 'Jane Smith',
-    customerTitle: 'Director of Research and Data',
-    customerImage: 'https://placeimg.com/150/150/people'
+    content: 'Awesome! Glad we decided to go with Worktools. Saved us loads of time and hassle.',
+    customerName: 'Adam Knibb',
+    customerTitle: 'Director - Adam Knibb Architects',
+    customerImage: { Wib }
   }
 ];
