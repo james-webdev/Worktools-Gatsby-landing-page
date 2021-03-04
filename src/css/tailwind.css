@@ -4,6 +4,15 @@ body {
   overflow-x: hidden !important;
 }
 
+.guardianblue {
+  background-color: #000a8d;
+  /* color: #000a8d; */
+}
+
+.guardianbluetext {
+  color: #000a8d;
+}
+
 #mainImage {
   width: 24rem;
   padding-top: 30px;
@@ -45,9 +54,15 @@ a:hover {
 
 .circle {
   fill: none;
-  stroke-width: 1.8;
+  stroke-width: 2.5;
   stroke-linecap: round;
   animation: progress 4s ease-out forwards;
+}
+
+.circle2 {
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
 }
 
 @keyframes progress {
@@ -75,77 +90,9 @@ a:hover {
 .percentage {
   fill: black;
   font-family: sans-serif;
-  font-size: 0.29em;
+  font-size: 0.38em;
   font-weight: bold;
   text-anchor: middle;
-}
-
-/* Fade in text */
-
-.fade {
-  text-transform: none;
-  opacity: 100;
-  animation: fadeIn ease 2s;
-  -webkit-animation: fadeIn ease 2s;
-}
-
-.fade2 {
-  text-transform: none;
-  opacity: 100;
-  animation: fadeIn ease 5s;
-  -webkit-animation: fadeIn ease 5s;
-}
-
-.fade3 {
-  text-transform: none;
-  opacity: 100;
-  animation: fadeIn ease 7s;
-  -webkit-animation: fadeIn ease 7s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @media only screen and (max-width: 600px) {

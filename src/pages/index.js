@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.min.css';
+import ScrollTest from '../components/ScrollTest';
 import Button from '../components/Button';
 import Layout from '../components/layout/Layout';
 import CarouselEx from '../components/Carousel';
@@ -10,17 +13,21 @@ import Wib from '../assets/images/aknibba.png';
 
 export default () => (
   <Layout>
-    <section className="bg-blue-200 sm:-ml-40 sm:-mr-40 sm:rounded-b-full shadow-lg pt-10">
+    <section className="guardianblue sm:-ml-40 sm:-mr-40 sm:rounded-b-full shadow-lg pt-10">
       <div className="mx-auto sm:flex sm:ml-40 sm:mr-40 sm:justify-center">
         <div className="sm:flex-col sm:justify-center sm:items-center pt-20 text-center sm:w-1/3">
-          <h1 className="fade pt-18 text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-            Worktools
-          </h1>
-          <div className="sm:flex sm:justify-center sm:items-center">
+          <ScrollAnimation animateIn="animate__backInLeft">
+            <h1 className="pt-18 text-4xl text-white lg:text-5xl xl:text-6xl font-bold leading-none">
+              Worktools
+            </h1>
+          </ScrollAnimation>
+          <div className="sm:flex text-white sm:justify-center sm:items-center">
             <ul className="text-xl lg:text-2xl mt-6 semibold">
-              <li className="fade2 pt-5">
-                As a business, you have total visibility to manage your compliance
-              </li>
+              <ScrollAnimation animateIn="animate__backInUp">
+                <li className="pt-5">
+                  • As a business, you have total visibility to manage your compliance
+                </li>
+              </ScrollAnimation>
               {/* <li className="fade2 pt-5"> Get alerts when something needs your attention. </li>
             <li className="fade3 pt-5">
               Resolve Compliance, Cybersecurity & common IT issues yourself.
@@ -44,136 +51,41 @@ export default () => (
     </section>
 
     <div className="sm:ml-40 sm:mt-20 sm:mr-40 text-center">
-      <h2 className="text-3xl lg:text-5xl font-semibold">
-        With Worktools, get simple certification with continuous assessment.
-      </h2>
+      <ScrollAnimation animateIn="animate__fadeInLeft">
+        <h2 className="text-3xl lg:text-5xl font-semibold">
+          With Worktools, get simple certification with continuous assessment.
+        </h2>
+      </ScrollAnimation>
     </div>
 
     <div className="sm:mt-20 sm:ml-40 sm:mr-40">
       <CarouselEx />
     </div>
 
-    <section className="container shadow-lg sm:mr-4 mx-auto my-20 py-24 bg-blue-200 rounded-sm text-center">
-      <h3 className="text-3xl font-semibold">Ready to protect your business?</h3>
+    <section className="container shadow-lg sm:mr-4 mx-auto my-20 py-24 guardianblue rounded-sm text-center">
+      <h3 className="text-3xl text-white font-semibold">Ready to protect your business?</h3>
       <p className="mt-8">
-        <Button className="bg-green-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 ...">
+        <Button className="bg-gray-400 text-blue-900 hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 ...">
           Download Now
         </Button>
       </p>
     </section>
 
-    <section id="features" className="sm:ml-40 sm:mr-40">
-      <div className="container mx-auto text-center">
-        <h1 className="text-3xl lg:text-5xl font-semibold">
-          See the latest detailed analysis of your devices
-        </h1>
-        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
-          <div class="flex-wrapper flex flex-col sm:flex-row m-2 sm:ml-4 sm:mr-4">
-            <div class="single-chart m-3 w-full sm:w-1/3 shadow-md p-12 rounded-lg border border-solid border-gray-200">
-              <svg viewBox="0 0 36 36" class="circular-chart orange">
-                <path
-                  class="circle-bg"
-                  d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-                />
-                <path
-                  class="circle"
-                  stroke-dasharray="30, 100"
-                  d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-                />
-                <text x="18" y="20.35" class="percentage">
-                  30%
-                </text>
-              </svg>
-              <p className="mt-4">See the latest detailed analysis of your devices</p>
-            </div>
+    <ScrollTest />
 
-            <div class="single-chart w-full sm:w-1/3 m-3 shadow-md p-12 rounded-lg border border-solid border-gray-200">
-              <svg viewBox="0 0 36 36" class="circular-chart green">
-                <path
-                  class="circle-bg"
-                  d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-                />
-                <path
-                  class="circle"
-                  stroke-dasharray="60, 100"
-                  d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-                />
-                <text x="18" y="20.35" class="percentage">
-                  60%
-                </text>
-              </svg>
-              <p className="mt-4">Easily manage your NCSC Cyber Essentials and GDPR compliance</p>
-            </div>
-
-            <div class="single-chart w-full sm:w-1/3 m-3 shadow-md p-12 rounded-lg border border-solid border-gray-200">
-              <svg viewBox="0 0 36 36" class="circular-chart blue">
-                <path
-                  class="circle-bg"
-                  d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-                />
-                <path
-                  class="circle"
-                  stroke-dasharray="90, 100"
-                  d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-                />
-                <text x="18" y="20.35" class="percentage">
-                  90%
-                </text>
-              </svg>
-              <p className="mt-4">Understand the threats that your users and devices face.</p>
-            </div>
-
-            <div class="single-chart w-full sm:w-1/3 m-3 shadow-md p-12 rounded-lg border border-solid border-gray-200">
-              <svg viewBox="0 0 36 36" class="circular-chart emerald">
-                <path
-                  class="circle-bg"
-                  d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-                />
-                <path
-                  class="circle"
-                  stroke-dasharray="90, 100"
-                  d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-                />
-                <text x="18" y="20.35" class="percentage">
-                  100%
-                </text>
-              </svg>
-              <p className="mt-4">Get expert help at the click of a button</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section className="container sm:mr-4 mx-auto my-20 py-24 shadow-lg bg-blue-200 text-center">
-      <h3 className="text-3xl sm:ml-40 sm:mr-40 font-semibold">
+    <section className="container sm:mr-4 mx-auto my-20 py-24 shadow-lg guardianblue text-center">
+      <h3 className="text-3xl text-white sm:ml-40 sm:mr-40 font-semibold">
         We fully address the issue of freelancers, contract workers, temporary staff, and the use of
         personal devices.
       </h3>
       <p className="mt-8">
-        <Button className="bg-green-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 ...">
+        <Button className="bg-gray-400 text-blue-900 hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 ...">
           Download Now
         </Button>
       </p>
     </section>
 
-    <section className="mt-20 w-full">
+    <section id="pricing" className="mt-20 w-full">
       <div class="container flex flex-wrap pt-4 pb-20 m-auto mt-2 md:mt-5 lg:px-12 xl:px-16">
         <div class="w-full px-0 lg:px-4">
           <h2 class="px-12 font-bold text-center text-3xl lg:text-5xl font-semibold md:text-2xl">
@@ -194,8 +106,8 @@ export default () => (
                     Free<span class="text-3xl"></span>
                   </p>
                 </div>
-                <div class="flex flex-col items-center justify-center w-full h-full py-6 rounded-b-lg bg-blue-200">
-                  <p class="text-xl text-blue-600">1 month</p>
+                <div class="flex flex-col items-center justify-center w-full h-full py-6 rounded-b-lg bg-gray-500">
+                  <p class="text-xl text-white">1 month</p>
                   <button class="w-5/6 py-2 mt-2 font-semibold text-center uppercase bg-white border border-transparent rounded text-blue-400">
                     Get Started
                   </button>
@@ -212,8 +124,35 @@ export default () => (
                   <p class="text-3xl font-semibold text-center text-blue-600">
                     £19.<span class="text-3xl">00</span>
                   </p>
+                  <ul>
+                    <p>Protection, Insights and Reporting</p>
+                    <li>NCSC Cyber Essentials Self-Management</li>
+                    <li>Next-Gen AI Antivirus & Threat Protection</li>
+                    <li>Automated Device Health Monitoring</li>
+                    <li>Automated Threat Monitoring </li>
+                    <li>Automated Anomaly Detection</li>
+                    <li>Automated Device & Software Asset Management</li>
+                    <li>Automated Security Policy Enforcement </li>
+                    <li>Automated Non-compliance Alerting</li>
+                    <p>UNLIMITED Professional Assistance</p>
+                    <li>IT Support (Remote & On-Prem)</li>
+                    <li>Virtual CTO/CISO/IT Director</li>
+                    <li>Breach & Data Protection Assistance</li>
+                    <li>Cybersecurity Assistance</li>
+                    <li>IT Architecture reviews </li>
+                    <li>Compliance Consultancy Sessions</li>
+                    <li>Office Visits</li>
+                    <p>UNLIMITED IT Lifecycle Management</p>
+                    <li>User Device Management</li>
+                    <li>Cloud Services Management</li>
+                    <li>Network Management</li>
+                    <li>Local Server Management</li>
+                    <li>Encryption Management</li>
+                    <p>Plus</p>
+                    <li>1 hour Incident Response</li>
+                  </ul>
                 </div>
-                <div class="flex flex-col items-center justify-center w-full h-full py-6 rounded-b-lg bg-blue-500">
+                <div class="flex flex-col items-center justify-center w-full h-full py-6 rounded-b-lg guardianblue">
                   <p class="text-xl text-white">3 months</p>
                   <button class="w-5/6 py-2 mt-2 font-semibold text-center uppercase bg-white border border-transparent rounded text-blue-500">
                     Save 15%
@@ -232,8 +171,8 @@ export default () => (
                     £74.<span class="text-3xl">00</span>
                   </p>
                 </div>
-                <div class="flex flex-col items-center justify-center w-full h-full py-6 rounded-b-lg bg-blue-200">
-                  <p class="text-xl text-blue-600">6 months</p>
+                <div class="flex flex-col items-center justify-center w-full h-full py-6 rounded-b-lg bg-gray-500">
+                  <p class="text-xl text-white">6 months</p>
                   <button class="w-5/6 py-2 mt-2 font-semibold text-center uppercase bg-white border border-transparent rounded text-blue-500">
                     Save 25%
                   </button>
@@ -245,9 +184,16 @@ export default () => (
       </div>
     </section>
 
-    <section className="bg-blue-200 sm:-ml-40 sm:-mr-40 rounded-full py-3 px-6 shadow-lg flex justify-center items-center">
+    <section
+      id="testimonials"
+      className="guardianblue sm:-ml-40 sm:-mr-40 rounded-full py-3 px-6 shadow-lg flex justify-center items-center"
+    >
       <div className="container sm:mt-20 mx-auto text-center">
-        <h2 className="text-3xl lg:text-1xl font-semibold">What our clients are saying:</h2>
+        <ScrollAnimation animateIn="animate__pulse">
+          <h2 className="text-3xl text-white lg:text-1xl font-semibold">
+            What our clients are saying:
+          </h2>
+        </ScrollAnimation>
         <div className="flex flex-col pt-4 sm:ml-40 sm:mr-40 sm:mb-20 sm:justify-around sm:flex-row">
           <div className="p-5 bg-white shadow-lg m-10 rounded-lg w-95% sm:w-1/3">
             <div className="text-md pt-3 text-black">
