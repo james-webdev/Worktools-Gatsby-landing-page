@@ -6,7 +6,7 @@ import Button from '../components/Button';
 import Layout from '../components/layout/Layout';
 import CarouselEx from '../components/Carousel';
 import SplitSection from '../components/SplitSection';
-import GWeb from '../assets/images/gweb.png';
+import GWebGreen from '../assets/images/gwebgreen.png';
 import Beatnik from '../assets/images/Beatnik.png';
 import AdDynamo from '../assets/images/addynamo.png';
 import Wib from '../assets/images/aknibba.png';
@@ -15,17 +15,18 @@ export default () => (
   <Layout>
     <section className="guardianblue sm:-ml-40 sm:-mr-40 sm:rounded-b-full shadow-lg pt-10">
       <div className="mx-auto sm:flex sm:ml-40 sm:mr-40 sm:justify-center">
-        <div className="sm:flex-col sm:justify-center sm:items-center pt-20 text-center sm:w-1/3">
+        <div className="sm:flex-col sm:mb-20 sm:justify-center sm:items-center pt-20 text-center sm:w-1/3">
           <ScrollAnimation animateIn="animate__backInLeft">
-            <h1 className="pt-18 text-4xl text-white lg:text-5xl xl:text-6xl font-bold leading-none">
+            <h1 className="pt-10 text-4xl text-white lg:text-5xl xl:text-6xl font-bold leading-none">
               Worktools
             </h1>
           </ScrollAnimation>
+
           <div className="sm:flex text-white sm:justify-center sm:items-center">
             <ul className="text-xl lg:text-2xl mt-6 semibold">
               <ScrollAnimation animateIn="animate__backInUp">
                 <li className="pt-5">
-                  • As a business, you have total visibility to manage your compliance
+                  As a business, you have total visibility to manage your compliance
                 </li>
               </ScrollAnimation>
               {/* <li className="fade2 pt-5"> Get alerts when something needs your attention. </li>
@@ -39,19 +40,20 @@ export default () => (
           </p>
           <p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p> */}
         </div>
-        <div className="w-1/3">
-          <div id="mainImage" className="fade w-40 sm:w-1/2">
-            <img src={GWeb} alt="" />
+        <div className="sm:flex-col sm:mb-20 sm:justify-center sm:items-center text-center sm:w-1/2">
+          <div className="flex justify-center items-center">
+            <div id="mainImage" className="w-full">
+              <div id="blob" className="flex justify-center items-center">
+                <div className="blob"></div>
+              </div>
+            </div>
           </div>
-          {/* <div id="mainImage" className="fade w-48 sm:w-1/2">
-            <img src={GWebGreen} alt="" />
-          </div> */}
         </div>
       </div>
     </section>
 
     <div className="sm:ml-40 sm:mt-20 sm:mr-40 text-center">
-      <ScrollAnimation animateIn="animate__fadeInLeft">
+      <ScrollAnimation animateIn="animate__backInLeft">
         <h2 className="text-3xl lg:text-5xl font-semibold">
           With Worktools, get simple certification with continuous assessment.
         </h2>
@@ -124,7 +126,7 @@ export default () => (
                   <p class="text-3xl font-semibold text-center text-blue-600">
                     £19.<span class="text-3xl">00</span>
                   </p>
-                  <ul>
+                  {/* <ul>
                     <p>Protection, Insights and Reporting</p>
                     <li>NCSC Cyber Essentials Self-Management</li>
                     <li>Next-Gen AI Antivirus & Threat Protection</li>
@@ -150,7 +152,7 @@ export default () => (
                     <li>Encryption Management</li>
                     <p>Plus</p>
                     <li>1 hour Incident Response</li>
-                  </ul>
+                  </ul> */}
                 </div>
                 <div class="flex flex-col items-center justify-center w-full h-full py-6 rounded-b-lg guardianblue">
                   <p class="text-xl text-white">3 months</p>
@@ -184,7 +186,7 @@ export default () => (
       </div>
     </section>
 
-    <section
+    {/* <section
       id="testimonials"
       className="guardianblue sm:-ml-40 sm:-mr-40 rounded-full py-3 px-6 shadow-lg flex justify-center items-center"
     >
@@ -232,6 +234,6 @@ export default () => (
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
   </Layout>
 );

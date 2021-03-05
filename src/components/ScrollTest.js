@@ -20,7 +20,7 @@ const ScrollTest = () => {
   return (
     <section id="features" className="sm:ml-40 sm:mr-40">
       <div className="container mx-auto text-center">
-        <ScrollAnimation animateIn="animate__fadeInRight">
+        <ScrollAnimation animateIn="animate__backInRight">
           <h1 className="text-3xl lg:text-5xl font-semibold">
             See the latest detailed analysis of your devices
           </h1>
